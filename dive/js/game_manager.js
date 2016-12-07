@@ -116,9 +116,9 @@ GameManager.prototype.move = function (direction) {
     // The idea of this is that a seed is ominous roughly if it exceeds 
     // the 2i-th prime, if there are i seeds so far.
     // But add a little more, to be forgiving.
-    ominosityBound = self.tileTypes.length * 2;
+    ominosityBound = self.tileTypes.length * 3;
     ominosityBound *= Math.log(ominosityBound);
-    ominosityBound += 8;
+    ominosityBound += 9;
   }
 
   // Traverse the grid in the right direction and move tiles
@@ -180,9 +180,9 @@ GameManager.prototype.move = function (direction) {
 
       self.tilesSeen.push.apply(self.tilesSeen, newPrimes);
 
-      var verb = " unlocked!";
+      var verb = " unleashed!";
       if (newPrimes.filter(function(x){return x > ominosityBound}).length)
-        verb = " unleashed!";
+        verb = " unlocked!";
       var list = String(newPrimes.pop());
       if (newPrimes.length) {
         list = newPrimes.join(", ") + " and " + list;
@@ -215,9 +215,9 @@ GameManager.prototype.move = function (direction) {
         var eliminatedPrimes = eliminatedIndices.map(function (x) {return self.tileTypes[x]});
         self.score += eliminatedPrimes.reduce(function(x,y){return x+y});
 
-        var verb = " eliminated!"
+        var verb = " vanqished!"
         if (eliminatedPrimes.filter(function(x){return x > ominosityBound}).length)
-          verb = " vanquished!";
+          verb = " eliminated!";
         var list = String(eliminatedPrimes.pop());
         if (eliminatedPrimes.length) {
           list = eliminatedPrimes.join(", ") + " and " + list;
