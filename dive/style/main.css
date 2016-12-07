@@ -412,7 +412,7 @@ hr {
   .tile.tile-864      { background: #dd0; }
   .tile.tile-1728     { background: #ed0; }
   .tile.tile-3456     { background: #fd0; }
-  .tile.tile-81       { background: #0f0; }
+  .tile.tile-81       { background: #0e0; }
   .tile.tile-162      { background: #4f0; }
   .tile.tile-324      { background: #8f0; }
   .tile.tile-648      { background: #af0; }
@@ -420,6 +420,8 @@ hr {
   .tile.tile-2592     { background: #df0; }
   .tile.tile-5184     { background: #ef0; }
   .tile.tile-10368    { background: #ff0; }
+  .tile.tile-256      { background: #ff4022; }
+  .tile.tile-243      { background: #0f0; }
   .tile.tile-5        { background: #008; }
   .tile.tile-10       { background: #408; }
   .tile.tile-20       { background: #808; }
@@ -551,8 +553,8 @@ hr {
   background-image: url('http://alexfink.github.io/dive/tileoverlays/sprite.png'); 
   background-size: 200% auto;
 }
-.tileoverlay.tileoverlay-7    { background-position: 0% 0%; }
-.tileoverlay.tileoverlay-49   { background-position: -100% 0%; }
+.tileoverlay.tileoverlay-2    { background-position: 0% 0%; }
+.tileoverlay.tileoverlay-4   { background-position: -100% 0%; }
 .tileoverlay.tileoverlay-11    { background-position: 0% -100%; }
 .tileoverlay.tileoverlay-121  { background-position: -100% -100%; }
 .tileoverlay.tileoverlay-13 { background-position: 0% -200%; }
