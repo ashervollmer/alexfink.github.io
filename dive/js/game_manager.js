@@ -180,9 +180,9 @@ GameManager.prototype.move = function (direction) {
 
       self.tilesSeen.push.apply(self.tilesSeen, newPrimes);
 
-      var verb = " unleashed!";
+      var verb = " unlocked";
       if (newPrimes.filter(function(x){return x > ominosityBound}).length)
-        verb = " unlocked!";
+        verb = " unleashed";
       var list = String(newPrimes.pop());
       if (newPrimes.length) {
         list = newPrimes.join(", ") + " and " + list;
@@ -215,9 +215,9 @@ GameManager.prototype.move = function (direction) {
         var eliminatedPrimes = eliminatedIndices.map(function (x) {return self.tileTypes[x]});
         self.score += eliminatedPrimes.reduce(function(x,y){return x+y});
 
-        var verb = " vanqished!"
+        var verb = " eliminated!"
         if (eliminatedPrimes.filter(function(x){return x > ominosityBound}).length)
-          verb = " eliminated!";
+          verb = " vanquished!";
         var list = String(eliminatedPrimes.pop());
         if (eliminatedPrimes.length) {
           list = eliminatedPrimes.join(", ") + " and " + list;
