@@ -180,9 +180,9 @@ GameManager.prototype.move = function (direction) {
 
       self.tilesSeen.push.apply(self.tilesSeen, newPrimes);
 
-      var verb = " unlocked";
+      var verb = " unlocked!";
       if (newPrimes.filter(function(x){return x > ominosityBound}).length)
-        verb = " unleashed";
+        verb = " unleashed!";
       var list = String(newPrimes.pop());
       if (newPrimes.length) {
         list = newPrimes.join(", ") + " and " + list;
