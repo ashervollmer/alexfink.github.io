@@ -26,9 +26,9 @@ GameManager.prototype.setup = function () {
   this.gameMode     = +(select.options[select.selectedIndex].value);
   this.tileTypes = [2,3,5,7];
   if (this.gameMode & 1) {
-    this.tileTypes = [31];
+    this.tileTypes = [283];
     this.actuator.updateCurrentlyUnlocked(this.tileTypes);
-    this.tilesSeen = [31];
+    this.tilesSeen = [283];
   } 
 
   this.score        = 0;
